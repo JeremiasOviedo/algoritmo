@@ -6,7 +6,7 @@ Precio por unidad : $120
 <br>
 Precio por media docena : $700
 <br>
-Precio por docena: $700
+Precio por docena: $1300
 
 <br>
 Diseñe un algoritmo que calcula el valor total de la compra cuando se ingresa la cantidad de undiades
