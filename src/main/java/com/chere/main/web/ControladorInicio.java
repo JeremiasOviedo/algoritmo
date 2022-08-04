@@ -27,7 +27,7 @@ public class ControladorInicio {
     @PostMapping("/calcular")
     public String calcular(Model model, int cantidad) {
 
-        var valorTotal = precioService.algoritmo(cantidad);
+        int valorTotal = precioService.algoritmo(cantidad);
 
         model.addAttribute("valorTotal", valorTotal);
 
