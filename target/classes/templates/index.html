@@ -16,105 +16,107 @@
                             </div>
                             <div class="container bg-light bg-gradient rounded text-center mt-3" style="--bs-bg-opacity: .8;">
                                 <div class="row">
-                                    <div class ="col-3">
-                                        <div class="card border-primary mb-3">
+                                    <div class ="col-md-3 col-sm-12">
+                                        <div class="card h-auto border-primary mb-3">
                                             <div class="card-header"><h3>PRECIOS:</h3></div>
                                             <div class="card-body text-primary">
 
 
 
                                                 <span class="card-text">Precio Individual: $[[*{precioIndividual}]]</span></br>
-                                                <span class="card-text">Precio por media docena: $[[${precioMediaDocena}]] </span><br>
-                                                    <span class="card-text">Precio por Docena $[[${precioDocena}]] </span>
-
-                                            </div>
-                                        </div>
-                                        
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cambiarPrecios" >
-                    Cambiar Precios
-                </button>
-           
-
-            <div class="modal fade" id="cambiarPrecios" tabindex="-1" role="dialog" aria-labelledby="agregarCliente" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header text-center">
-                            <div class="display-5 modal-title" id="agregarCliente" >Cambiar Precios</div>
-                        </div>
-                        <form th:action ="@{/cambiarPrecio}" th:object="${precio}"
-                              method="POST" class="was-validated">
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="precioIndividual">Precio Individual</label>
-                                    <input type="number" class="form-control" name="precioIndividual" required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="precioMediaDocena">Precio Media Docena</label>
-                                    <input type="number" class="form-control" name="precioMediaDocena" required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="precioDocena">Precio Docena</label>
-                                    <input type="number" class="form-control" name="precioDocena" required="true">
-                                </div>
-                            </div>
-                            
-
-                       
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Cerrar ventana</button>
-                        </div>
-                        </form>
-                    </div>
-                </div>
-            </div>        
-                                        
-                                    </div>
-
-
-                                    <div class="col-6">
-                                        <div class="card border-primary mb-3">
-                                            <div class="card-header"><h3>Ingrese cantidad de productos:</h3></div>
-                                            <div class ="card-body">
-                                                <form th:action="@{/calcular}" th:object="${precio}"
-                                                      method="POST">
-                                                    <label class="form-label">Cantidad</label>
-                                                    <input type="number" id="cantidad" class="form-control" name="cantidad" required="true"></input>
-                                                    <br>
-                                                        <button type="submit" class="btn btn-primary" th:text="Calcular">Calcular</button>
-                                                </form> 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class ="col-3">
-                                        <div class="card border-primary mb-3">
-                                            <div class="card-header"><h3>Valor:</h3></div>
-                                            <div class="card-body text-primary">
-                                                <h1 class="display-4" th:text="*{valorTotal}"></h1>
-                                            </div>
-                                            </div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
+                                                <span class="card-text">Precio por Media Docena: $[[${precioMediaDocena}]] </span><br>
+                                                    <span class="card-text">Precio por Docena $[[${precioDocena}]] </span><br><!-- comment -->
+                                                       
+                                                        <div class= "card-footer"><button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#cambiarPrecios" >
+                                                            Cambiar Precios
+                                                        </button>
+                                                        </div>
+                                                        </div>
+                                                        </div>
 
 
 
 
+                                                        <div class="modal fade" id="cambiarPrecios" tabindex="-1" role="dialog" aria-labelledby="agregarCliente" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header text-center">
+                                                                        <div class="display-5 modal-title" id="agregarCliente" >Cambiar Precios</div>
+                                                                    </div>
+                                                                    <form th:action ="@{/cambiarPrecio}" th:object="${precio}"
+                                                                          method="POST" class="was-validated">
+                                                                        <div class="modal-body">
+                                                                            <div class="form-group">
+                                                                                <label for="precioIndividual">Precio Individual</label>
+                                                                                <input type="number" class="form-control" name="precioIndividual" required="true">
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="precioMediaDocena">Precio Media Docena</label>
+                                                                                <input type="number" class="form-control" name="precioMediaDocena" required="true">
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="precioDocena">Precio Docena</label>
+                                                                                <input type="number" class="form-control" name="precioDocena" required="true">
+                                                                            </div>
+                                                                        </div>
+
+
+
+                                                                        <div class="modal-footer">
+                                                                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                                                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Cerrar ventana</button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>        
+
+                                                        </div>
+
+
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="card h-auto border-primary mb-3">
+                                                                <div class="card-header"><h3>Ingrese cantidad de productos:</h3></div>
+                                                                <div class ="card-body">
+                                                                    <form th:action="@{/calcular}" th:object="${precio}"
+                                                                          method="POST">
+                                                                        <label class="form-label">Cantidad</label>
+                                                                        <input type="number" id="cantidad" class="form-control" name="cantidad" required="true"></input>
+                                                                        <br>
+                                                                            <button type="submit" class="btn btn-primary" th:text="Calcular">Calcular</button>
+                                                                    </form> 
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class ="col-md-3 col-sm-12" >
+                                                            <div class="card h-auto border-primary mb-3">
+                                                                <div class="card-header"><h3>Valor:</h3></div>
+                                                                <div class="card-body text-primary">
+                                                                    <h1 class="display-4" th:text="*{valorTotal}"></h1>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
 
 
 
 
 
-                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-                    </body>
-    <footer>
-        
-        <div class="container fluid bg-dark text-center text-white py-2">
-            <span>Calculadora hecha por Jeremias Oviedo
-                <a href="https://jeremiasoviedo.github.io/">Pagina Personal</a> | <a href="https://github.com/JeremiasOviedo">Github</a> | <a href="https://www.linkedin.com/in/jeremiasoviedo/">LinkedIn</a> </span>
-        </div>
-       
-        
-    </footer>
-                    </html>
+
+
+
+
+                                                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+                                                        </body>
+                                                        <footer>
+
+                                                            <div class="container fluid bg-dark text-center text-white py-2">
+                                                                <span>Calculadora hecha por Jeremias Oviedo
+                                                                    <a href="https://jeremiasoviedo.github.io/">Pagina Personal</a> | <a href="https://github.com/JeremiasOviedo">Github</a> | <a href="https://www.linkedin.com/in/jeremiasoviedo/">LinkedIn</a> </span>
+                                                            </div>
+
+
+                                                        </footer>
+                                                        </html>
