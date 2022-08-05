@@ -3,7 +3,7 @@
       xmlns="http://www.w3.org/1999/xhtml"
       >
     <head>
-        <title>Calculadora de precios</title>
+        <title>Calculadora de ventas</title>
         <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -12,7 +12,7 @@
 
                         <div class = "container bg-light border">
                             <div class="container bg-primary bg-gradient rounded text-center mt-3 py-5" style="--bs-bg-opacity: .8;">
-                                <h1 class="display-4 text-white">CALCULADORA DE PRECIOS</h1>
+                                <h1 class="display-4 text-white">CALCULAR VALOR DE VENTA</h1>
                             </div>
                             <div class="container bg-light bg-gradient rounded text-center mt-3" style="--bs-bg-opacity: .8;">
                                 <div class="row">
@@ -38,8 +38,8 @@
             <div class="modal fade" id="cambiarPrecios" tabindex="-1" role="dialog" aria-labelledby="agregarCliente" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="display-5 modal-title text-center" id="agregarCliente" >Cambiar Precios</div>
+                        <div class="modal-header text-center">
+                            <div class="display-5 modal-title" id="agregarCliente" >Cambiar Precios</div>
                         </div>
                         <form th:action ="@{/cambiarPrecio}" th:object="${precio}"
                               method="POST" class="was-validated">
@@ -62,7 +62,7 @@
                        
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal" >Cerrar ventana</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Cerrar ventana</button>
                         </div>
                         </form>
                     </div>
@@ -74,7 +74,7 @@
 
                                     <div class="col-6">
                                         <div class="card border-primary mb-3">
-                                            <div class="card-header"><h3>Ingrese cantidad:</h3></div>
+                                            <div class="card-header"><h3>Ingrese cantidad de productos:</h3></div>
                                             <div class ="card-body">
                                                 <form th:action="@{/calcular}" th:object="${precio}"
                                                       method="POST">
@@ -85,6 +85,15 @@
                                                 </form> 
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class ="col-3">
+                                        <div class="card border-primary mb-3">
+                                            <div class="card-header"><h3>Valor:</h3></div>
+                                            <div class="card-body text-primary">
+                                                <h1 class="display-4" th:text="*{valorTotal}"></h1>
+                                            </div>
+                                            </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -99,4 +108,13 @@
 
                             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
                     </body>
+    <footer>
+        
+        <div class="container fluid bg-dark text-center text-white py-2">
+            <span>Calculadora hecha por Jeremias Oviedo
+                <a href="https://jeremiasoviedo.github.io/">Pagina Personal</a> | <a href="https://github.com/JeremiasOviedo">Github</a> | <a href="https://www.linkedin.com/in/jeremiasoviedo/">LinkedIn</a> </span>
+        </div>
+       
+        
+    </footer>
                     </html>

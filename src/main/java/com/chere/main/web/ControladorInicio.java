@@ -12,13 +12,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ControladorInicio {
 
     Precios precioService = new Precios();
+    int valorTotal =  0;
     
     @GetMapping("/")
     public String inicio(Model model) {
 
+       String valorTotal = "$" + this.valorTotal;
         model.addAttribute("precioIndividual", precioService.getPrecioIndividual());
         model.addAttribute("precioMediaDocena", precioService.getPrecioMediaDocena());
         model.addAttribute("precioDocena", precioService.getPrecioDocena());
+        model.addAttribute ("valorTotal", valorTotal);
+       
 
         return "index";
 
@@ -27,11 +31,11 @@ public class ControladorInicio {
     @PostMapping("/calcular")
     public String calcular(Model model, int cantidad) {
 
-        int valorTotal = precioService.algoritmo(cantidad);
+        this.valorTotal = precioService.algoritmo(cantidad);
 
-        model.addAttribute("valorTotal", valorTotal);
+        
 
-        return "calcular";
+        return "redirect:/";
     }
 
     @PostMapping("/cambiarPrecio")
