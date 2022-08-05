@@ -14,4 +14,4 @@ Diseñe un algoritmo que calcula el valor total de la compra cuando se ingresa l
 Ejemplo: un cliente compra 20 unidades, el valor seria de $2240 ($1300 (1 docena) + $700 (1 media docena) + $240 (2 unidades).
 <br>
 
-Prueba este algortimo <a href="https://precios-por-promocion.herokuapp.com/">AQUI</a>
+Prueba este algoritmo <a href="https://precios-por-promocion.herokuapp.com/" target="_blank">AQUI</a>
