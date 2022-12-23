@@ -15,3 +15,14 @@ Ejemplo: un cliente compra 20 unidades, el valor seria de $2240 ($1300 (1 docena
 <br>
 
 Prueba este algoritmo <a href="https://precios-por-promocion.herokuapp.com/" target="_blank">AQUI</a>
+
+# Inicio
+
+<a href="https://postimg.cc/Hc2s4fkR" target="_blank"><img src="https://i.postimg.cc/903RV25m/Algoritmo.png" alt="Algoritmo"/></a><br/><br/>
+
+# Cambiando los precios
+<a href="https://postimg.cc/D4wfCBWZ" target="_blank"><img src="https://i.postimg.cc/cCQKLz0Q/cambiando-precios.png" alt="cambiando-precios"/></a><br/><br/>
+
+# Misma cantidad con precios actualizados
+<a href="https://postimg.cc/s1j2DDnr" target="_blank"><img src="https://i.postimg.cc/NGT2DKm5/precios-actualizados.png" alt="precios-actualizados"/></a><br/><br/>
+
